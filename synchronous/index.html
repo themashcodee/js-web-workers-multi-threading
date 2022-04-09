@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Synchronous Way</title>
+		<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body>
+		<main>
+			<h1 class="page-headline">
+				<a href="/"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="icon"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M10 19l-7-7m0 0l7-7m-7 7h18"
+						/>
+					</svg>
+				</a>
+				<span>Synchronous 🚕</span>
+			</h1>
+
+			<div class="container">
+				<p class="result synchronous">Sum will be shown here</p>
+				<button class="taskBtn synchronous">
+					Calculate the sum of numbers from 1 to 500 Million
+				</button>
+				<p class="description">
+					This calculation would be perform on the main thread synchronously.
+					Eventually, the entire website will be unresponsive until the
+					calculation is complete.
+				</p>
+			</div>
+
+			<input
+				class="testInput"
+				type="text"
+				placeholder="Type here to check whether the main thread is working perfectly while calculating the sum."
+			/>
+
+			<script src="app.js"></script>
+		</main>
+	</body>
+</html>

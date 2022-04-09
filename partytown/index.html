@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Partytown Way</title>
+		<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body>
+		<main>
+			<h1 class="page-headline">
+				<a href="/"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="icon"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M10 19l-7-7m0 0l7-7m-7 7h18"
+						/>
+					</svg>
+				</a>
+				<span>Web Workers with Partytown Library 🎉</span>
+			</h1>
+
+			<div class="container">
+				<p class="result partytown">Sum will be shown here</p>
+				<button class="taskBtn partytown">
+					Calculate the sum of numbers from 1 to 500 Million
+				</button>
+				<p class="description">
+					This calculation would be perform on second thread with the help of
+					web worker. We dont have DOM access in the web workers. But Partytown
+					enables DOM access in web workers in a genius way. It is for
+					off-loading third party scripts which are not directly playing a vital
+					role in the product such as Google Analytics. Partytown is not for
+					every type of purpose and also it is in beta as of 9 April, 2022.
+				</p>
+			</div>
+
+			<input
+				class="testInput"
+				type="text"
+				placeholder="Type here to check whether the main thread is working perfectly while calculating the sum."
+			/>
+		</main>
+
+		<!-- PARTYTOWN SDK -->
+		<script src="~partytown/partytown.js"></script>
+
+		<!-- EXTERNAL SCRIPT TO RUN ON ANOTHER THREAD -->
+		<script type="text/partytown" src="worker.js"></script>
+	</body>
+</html>
